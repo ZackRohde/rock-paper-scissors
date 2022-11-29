@@ -7,6 +7,7 @@
 const gameMoveChoices = ["rock", "paper", "scissors"]
 
 const getComputerChoice = () => {
-  return Math.floor(Math.random() * gameMoveChoices.length)
+const randomRoll = Math.floor(Math.random() * gameMoveChoices.length)
+  return gameMoveChoices[randomRoll]
 }
-console.log(getComputerChoice(gameMoveChoices))
+console.log(getComputerChoice())
