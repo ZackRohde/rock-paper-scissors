@@ -10,7 +10,6 @@ const getComputerChoice = () => {
 const randomRoll = Math.floor(Math.random() * gameMoveChoices.length)
   return gameMoveChoices[randomRoll]
 }
-console.log(getComputerChoice())
 
 // Pseudocode:
 // create a function named singleRound that takes in two parameters (playerSelection, computerSelection)
@@ -19,8 +18,11 @@ console.log(getComputerChoice())
 const singleRound = (playerSelection, computerSelection) => {
   if (playerSelection === gameMoveChoices[0] && computerSelection === gameMoveChoices[2]) {
     return "Rock beats scissors! You win!"
-  } else if (playerSelection === "paper" && computerSelection === "rock") {
+  } else if (playerSelection === gameMoveChoices[1] && computerSelection === gameMoveChoices[0]) {
     return "Paper beats rock! You win!"
+  } else if (playerSelection === gameMoveChoices[2] && computerSelection === gameMoveChoices[1]) {
+    return "Scissors beats paper! You win"
+  } else {
+    "error"
   }
 }
-console.log(singleRound("paper", "rock"))
